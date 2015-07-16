@@ -49,19 +49,24 @@ echo '{
 echo -e "\E[05;31m Requisitando permissão de root"; tput sgr0
 ## Instalo o Express e salvo no package.json
 sudo npm install express@4.8 --save
+## Instalo o Express-load e salvo no package.json
+sudo npm install express-load@1.1 --save
 ## Instalo o EJS e salvo no package.json
 sudo npm install ejs@0.8 --save
 ## Configurar o config/express.js
 > $Path/config/express.js
 echo "var express = require('express');
+var load = require('express-load');
 module.exports = function() {
   var app  = express();
-  var home = require('../app/routes/home');
   app.set('port', 3000);
   app.use(express.static('./public'));
   app.set('view engine', 'ejs');
   app.set('views', './app/views');
-  home(app);
+  load('models', {cwd: 'app'})
+    .then('controllers')
+    .then('routes')
+    .into(app);
   return app;
 };" >> $Path/config/express.js
 ## Configurar o app.js
@@ -102,9 +107,8 @@ echo '<!doctype html>
 </html>' >> $Path/app/views/index.ejs
 ## Configurar o app/routes/home.js
 > $Path/app/routes/home.js
-echo "var controller = require('../controllers/home')();
-module.exports = function(app){
-  app.get('/index', controller.index);
+echo "module.exports = function(app){
+  var controller = app.controllers.home;
   app.get('/', controller.index);
 };" >> $Path/app/routes/home.js
 ## Configurar o app/controllers/home.js
