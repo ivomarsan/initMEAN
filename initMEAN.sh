@@ -84,7 +84,7 @@ bower install angular-route#1.3 --save
 ## Crio um repositório git vazio
 git init
 ## Faço download da "lista negra do git"
-wget https://github.com/github/gitignore/blob/master/Node.gitignore -O .gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -O .gitignore
 ## Crio o readme padrão do repositório
 > $Path/README.md
 echo '# '$PROJECT_NAME
