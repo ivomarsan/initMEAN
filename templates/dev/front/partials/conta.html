@@ -1,0 +1,13 @@
+<h1>Conta</h1>
+
+<p ng-show="mensagem.texto">
+  {{ mensagem.texto }}
+</p>
+
+<form ng-submit="setConta()">
+  <label for="nome">Descrição</label>
+  <input id="nome" type="text" name="nome" required ng-model="conta.nome">
+
+  <button type="submit">Salvar</button>
+  <a href="#/contas">Voltar</a>
+</form>

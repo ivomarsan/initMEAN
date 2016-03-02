@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_BR" ng-app="<%= appNameSlug %>">
+  <head>
+    <meta charset="utf-8">
+    <title><%= appNameSlug %> - <%= appDescription %></title>
+    <!-- styles:css -->       <!-- endinject -->
+  </head>
+
+  <body>
+
+    <div id="barra-brasil-v3">
+    	<div id="borda_esquerda">&nbsp;</div>
+    	<div id="span">
+    		<div id="borda_direita">
+    			<div class="imagemGov">
+    				<a href="http://www.brasil.gov.br" class="brasilgov"> &nbsp; </a>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <header>
+      <svg
+        fill="#71c837"
+        width="374"
+        height="500"
+        viewbox="0 0 374 500">
+        <rect fill="#d40000"
+              width="120" height="120" ry="60" x="0"   y="0"   />
+        <rect width="120" height="120" ry="20" x="254" y="0"   />
+        <rect width="120" height="120" ry="20" x="254" y="254" />
+        <rect width="120" height="120" ry="20" x="126" y="254" />
+        <rect width="120" height="120" ry="20" x="0"   y="254" />
+        <rect width="120" height="120" ry="20" x="0"   y="126" />
+        <rect width="120" height="120" ry="20" x="126" y="126" />
+        <rect width="120" height="120" ry="20" x="126" y="0"   />
+        <rect width="120" height="120" ry="20" x="126" y="380" />
+        <rect width="120" height="120" ry="20" x="0"   y="380" />
+      </svg>
+
+      <h1>Requisição de Veículo Oficial</h1>
+    </header>
+
+    <article class="tabs">
+      <ng-view></ng-view>
+    </article>
+
+    <!-- scripts:js -->       <!-- endinject -->
+  </body>
+</html>

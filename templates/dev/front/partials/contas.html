@@ -1,0 +1,18 @@
+<div ng-repeat="conta in contas">
+  <a ng-href="#/conta/{{ conta._id }}">{{ conta.nome }}</a>
+  <button ng-click="remove( conta )">Remover {{ conta.nome }}</button>
+  <hr>
+</div>
+
+<p ng-show="contas.length">
+  Contas Cadastradas: {{ contas.length }}
+</p>
+<p ng-hide="contas.length">
+  Não há Contas Cadastradas!
+</p>
+
+<p ng-show="mensagem.texto">
+  {{ mensagem.texto }}
+</p>
+
+<a ng-href="#/conta">Cadastrar Conta</a>

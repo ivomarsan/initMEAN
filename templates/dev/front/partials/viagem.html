@@ -1,0 +1,29 @@
+<form id="frm" name="frm" method="post" action="source/insert.php">
+  <section id="2">
+
+    <aside>
+      <h2>Viagem</h2>
+      <a ng-href="#1" ng-click="setData()">↼</a>
+      <!-- &#8636; -->
+      <a ng-href="#3" ng-click="setData()">⇀</a>
+      <!-- &#8640; -->
+    </aside>
+
+    <label for="REQ_DESTINO">Destino</label>
+      <textarea required autocomplete="off" rows="3" id="REQ_DESTINO" name="REQ_DESTINO" type="text" maxlength="140" placeholder="Destino da Viagem" ng-model="reca.REQ_DESTINO"></textarea>
+    <label for="REQ_PASSAGEIROS">Passageiros</label>
+      <input required autocomplete="off" name="REQ_PASSAGEIROS" type="number" min="1" max="45" id="REQ_PASSAGEIROS" placeholder="N&uacute;mero" pattern="[0-9]+$" ng-model="reca.REQ_PASSAGEIROS"/>
+    <label for="REQ_MOTIVO">Motivo</label>
+      <textarea required autocomplete="off" rows="4" id="REQ_MOTIVO" name="REQ_MOTIVO" type="text" maxlength="140" placeholder="Motivo da Viagem" ng-model="reca.REQ_MOTIVO"></textarea>
+    <label for="REQ_ROTEIRO">Roteiro</label>
+      <textarea required autocomplete="off" rows="5" id="REQ_ROTEIRO" name="REQ_ROTEIRO" type="text" maxlength="140" placeholder="Roteiro da Viagem" ng-model="reca.REQ_ROTEIRO"></textarea>
+
+    <footer>
+      <a ng-href="#1" ng-click="setData()">⇐</a>
+      <!-- &#8656; -->
+      <a ng-href="#3" ng-click="setData()">⇒</a>
+      <!-- &#8658; -->
+    </footer>
+
+  </section>
+</form>

@@ -1,0 +1,35 @@
+<form id="frm" name="frm" method="post" action="source/insert.php">
+  <section id="1">
+
+    <aside>
+      <h2>Identificação</h2>
+      <!-- <a>&#8636;</a> -->
+      <a ng-href="#2" ng-click="setData()">⇀</a>
+      <!-- &#8640; -->
+    </aside>
+
+    <label for="REQ_SOLICITANTE">Solicitante</label>
+      <input required autocomplete="on" autofocus="true" id="REQ_SOLICITANTE" name="REQ_SOLICITANTE" type="text" maxlength="50" placeholder="Informe o Nome do Solicitante" pattern="[A-Za-zÀ-ú\s]+$" ng-model="reca.REQ_SOLICITANTE" ng-length="2"/>
+    <label for="REQ_MATRICULA">Matrícula</label>
+      <input required autocomplete="off" name="REQ_MATRICULA" type="number" min="0" id="REQ_MATRICULA" placeholder="SIAPE" pattern="[0-9]+$" ng-model="reca.REQ_MATRICULA"/>
+    <label for="REQ_EMAIL">E-mail</label>
+      <input required autocomplete="off" name="REQ_EMAIL" type="email" id="REQ_EMAIL" placeholder="E-mail do Solicitante" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ng-model="reca.REQ_EMAIL"/>
+    <label for="REQ_CELULAR">Celular</label>
+      <input required autocomplete="on" name="REQ_CELULAR" type="text" id="REQ_CELULAR" maxlength="15" placeholder="Celular do Solicitante" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" ui-br-phone-number ng-model="reca.REQ_CELULAR"/>
+    <label for="REQ_SETOR">Setor</label>
+      <input required autocomplete="on" autofocus="true" id="REQ_SETOR" name="REQ_SETOR" type="text" maxlength="50" placeholder="Setor do Solicitante" ng-model="reca.REQ_SETOR"/>
+    <label for="REQ_TELEFONE">Telefone / Ramal</label>
+      <input autocomplete="on" name="REQ_TELEFONE" type="text" id="REQ_TELEFONE" maxlength="15" placeholder="Telefone do Solicitante" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" ui-br-phone-number ng-model="reca.REQ_TELEFONE"/>
+    <label for="REQ_CONTATO">Pessoa para Contato</label>
+      <input required autocomplete="on" autofocus="true" id="REQ_CONTATO" name="REQ_CONTATO" type="text" maxlength="50" placeholder="Informe o Nome" pattern="[A-Za-zÀ-ú\s]+$" ng-model="reca.REQ_CONTATO"/>
+    <label for="REQ_CONTATO_CEL">Celular</label>
+      <input required autocomplete="on" name="REQ_CONTATO_CEL" type="text" id="REQ_CONTATO_CEL" maxlength="15" placeholder="Celular do Contato" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" ui-br-phone-number ng-model="reca.REQ_CONTATO_CEL"/>
+
+    <footer>
+      <!-- <a>&#8656;</a> -->
+      <a ng-href="#2" ng-click="setData()">⇒</a>
+      <!-- &#8658; -->
+    </footer>
+
+  </section>
+</form>

@@ -1,0 +1,59 @@
+{
+  "name": "<%= appNameSlug %>",
+  "version": "<%= appVersion %>",
+  "description": "<%= appDescription %>",
+  "main": "<%= indexName %>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= userName %>/<%= appNameSlug %>.git"
+  },
+  "author": {
+    "name": "<%= authorName %>",
+    "url": "<%= authorEmail %>"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= userName %>/<%= appNameSlug %>/issues"
+  },
+  "homepage": "https://github.com/<%= userName %>/<%= appNameSlug %>#readme",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "angular-input-masks": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "body-parser": "latest",
+    "compression": "latest",
+    "express-load": "latest",
+    "method-override": "latest"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-size": "latest",
+    "gulp-clean": "latest",
+    "gulp-rename": "latest",
+    "gulp-jshint": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-stylus": "latest",
+    "gulp-inject": "latest",
+    "gulp-jasmine": "latest",
+    "gulp-nodemon": "latest",
+
+    "gulp-browserify": "latest",
+    "browserify": "latest",
+
+    "gulp-angular-templatecache": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-jasmine-browser": "latest",
+    "gulp-html-minifier": "latest",
+    "gulp-ng-annotate": "latest",
+    "browser-sync": "latest",
+    "nib": "latest",
+    "jshint": "latest",
+    "jshint-stylish": "latest"
+  }
+}

@@ -1,0 +1,140 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
+<!--
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+-->
+<!-- Plugin files -->
+<!-- script src="https://cdn.rawgit.com/zhaber/datetimepicker/master/datetimepicker.js"></script -->
+<style>
+.datetimepicker-wrapper {
+vertical-align: middle;
+display: inline-block;
+}
+
+.datetimepicker-wrapper > input {
+margin-bottom: 0 !important;
+width: 130px;
+}
+
+.datetimepicker-wrapper [ng-model=hours],
+.datetimepicker-wrapper [ng-model=minutes] {
+width: 46px !important;
+}
+
+
+
+
+
+
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+.glyphicon {
+  position: relative;
+  top: 0;
+  font-size: 125%;
+  display: inline-block;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 1;
+  color: #3B6B36;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-up:before {
+  content: '⋀';
+}
+.glyphicon-chevron-down:before {
+  content: '⋁';
+}
+</style>
+
+
+
+<!--
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+<form name="demo">
+      <pre>Selected time and date is: <em>{{date | date:'shortTime' }}, {{date | date:'fullDate' }}</em></pre>
+
+      <datetimepicker min-date="minDate" hour-step="hourStep"
+      minute-step="minuteStep" ng-model="date" show-meridian="showMeridian"
+      date-format="dd-MMM-yyyy" date-options="dateOptions"
+      date-disabled="disabled(date, mode)"
+      datepicker-append-to-body="false"
+      readonly-date="false"
+      hidden-time="false"
+      hidden-date="false"
+      name="datetimepicker"
+      show-spinners="true"
+      readonly-time="false"
+      date-opened="dateOpened"
+      >
+      Use date-ng-click="open($event, opened)" to override date ng-click
+      </datetimepicker>
+      </form>
+-->
+
+
+
+<form id="frm" name="frm" method="post" action="source/insert.php">
+  <section id="3">
+
+    <aside>
+      <h2>Horários</h2>
+      <a ng-href="#2" ng-click="setData()">↼</a><!-- &#8636; -->
+      <a ng-href="#4" ng-click="setData()">⇀</a><!-- &#8640; -->
+    </aside>
+<!--
+    <label for="REQ_DATA_SAIDA">Data de Saída</label>
+      <input required autocomplete="off" name="REQ_DATA_SAIDA" type="date" id="REQ_DATA_SAIDA" placeholder="Data de Saída" maxlength="10" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2015-11-06" max="2025-11-06"  ng-model="reca.REQ_DATA_SAIDA"/>
+    <label for="REQ_HORA_SAIDA">Hora de Saída</label>
+      <input required autocomplete="off" name="REQ_HORA_SAIDA" type="time" id="REQ_HORA_SAIDA" placeholder="Hora de Saída" maxlength="5" pattern="[0-9]{2}:[0-9]{2}" ng-model="reca.REQ_HORA_SAIDA"/>
+-->
+<datetimepicker min-date="minDate" hour-step="hourStep"
+minute-step="minuteStep" ng-model="date" show-meridian="showMeridian"
+date-format="dd-MMM-yyyy" date-options="dateOptions"
+date-disabled="disabled(date, mode)"
+datepicker-append-to-body="false"
+readonly-date="false"
+hidden-time="false"
+hidden-date="false"
+name="datetimepicker"
+show-spinners="true"
+readonly-time="false"
+date-opened="dateOpened"
+>
+<!-- Use date-ng-click="open($event, opened)" to override date ng-click -->
+</datetimepicker>
+
+    <label for="REQ_LOCAL_SAIDA">Local de Saída</label>
+      <textarea required autocomplete="off" rows="3" id="REQ_LOCAL_SAIDA" name="REQ_LOCAL_SAIDA" type="text" maxlength="140" placeholder="Local de Saída" ng-model="reca.REQ_LOCAL_SAIDA"></textarea>
+    <label for="REQ_DATA_RETORNO">Data de Retorno</label>
+      <input required autocomplete="off" name="REQ_DATA_RETORNO" type="date" id="REQ_DATA_RETORNO" placeholder="Data de Retorno" maxlength="10" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2015-11-06" max="2025-11-06" ng-model="reca.REQ_DATA_RETORNO"/>
+    <label for="REQ_HORA_RETORNO">Hora de Retorno</label>
+      <input required autocomplete="off" name="REQ_HORA_RETORNO" type="time" id="REQ_HORA_RETORNO" placeholder="Hora de Retorno" maxlength="5" pattern="[0-9]{2}:[0-9]{2}" ng-model="reca.REQ_HORA_RETORNO"/>
+    <label for="REQ_LOCAL_RETORNO">Local de Retorno</label>
+      <textarea required autocomplete="off" rows="3" id="REQ_LOCAL_RETORNO" name="REQ_LOCAL_RETORNO" type="text" maxlength="140" placeholder="Local de Retorno" ng-model="reca.REQ_LOCAL_RETORNO"></textarea>
+
+    <footer>
+      <a ng-href="#2" ng-click="setData()">⇐</a><!-- &#8656; -->
+      <a ng-href="#4" ng-click="setData()">⇒</a><!-- &#8658; -->
+    </footer>
+</section>
+</form>
