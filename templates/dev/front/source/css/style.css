@@ -1,3 +1,8 @@
+/* Isso vai mudar para bloquear quando scope e angular estiverem prontos*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 @font-face {
   font-family: 'Abel';
   font-style: normal;

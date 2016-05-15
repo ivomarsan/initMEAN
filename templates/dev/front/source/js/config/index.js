@@ -39,8 +39,13 @@ app.config(['$routeProvider', function($routeProvider) {
       , controller: 'ContaController'
       }
     )
+    .when('/404',
+      { templateUrl: '404.html'
+      , controller: 'Error404'
+      }
+    )
     .otherwise({
-      redirectTo: '/1'
+      redirectTo: '/404'
     })
   ;
 }]);
